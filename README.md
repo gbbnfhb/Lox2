@@ -1,3 +1,10 @@
+Lox2 ver2.1.1にFFIを実装してみた。9割AI製だけど。後少々バグ修正。  
+/src/lox_ffi.c と　/test/ffi　参照  
+libffiはvcpkgを使って自分でビルドしておくれ  
+
+
+
+
 # Lox2
 A superset of Lox with ByteCode Interpreter, with multi-pass compiler, optional type checker and tons of new features.
 
