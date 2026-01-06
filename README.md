@@ -1,10 +1,14 @@
 Lox2 ブランチver2.1.0(masterではないので注意)にFFIを実装してみた。9割AI製だけど。後少々バグ修正。  
 /src/lox_ffi.c と　/test/ffi　参照  
 libffiはvcpkgを使って自分でビルドしておくれ  
-
-
-
-
+  
+※以下駄文  
+ハマった所。メモリを確保するときに独自でやろうとしてklassが空っぽなの気が付かなかった。  
+ffiのメモリを確保するのにshot、charをintと混ぜてしまいハマった。  
+両方ともantigravityに直してもらった。すげー。でもすぐ上限に行ってしまうので、本当に困った時しか使えないのがたまに傷。  
+  
+  
+  
 # Lox2
 A superset of Lox with ByteCode Interpreter, with multi-pass compiler, optional type checker and tons of new features.
 
