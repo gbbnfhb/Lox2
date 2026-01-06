@@ -1,4 +1,4 @@
-Lox2 ver2.1.1にFFIを実装してみた。9割AI製だけど。後少々バグ修正。  
+Lox2 ブランチver2.1.0(masterではないので注意)にFFIを実装してみた。9割AI製だけど。後少々バグ修正。  
 /src/lox_ffi.c と　/test/ffi　参照  
 libffiはvcpkgを使って自分でビルドしておくれ  
 
