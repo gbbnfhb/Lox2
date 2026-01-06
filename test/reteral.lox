@@ -1,0 +1,6 @@
+val a = [2, 3.5, nil, "Hello World"] 
+println(a.length);
+a.removeAt(1)
+println(a.length);
+println(a[2]);
+a.clear()

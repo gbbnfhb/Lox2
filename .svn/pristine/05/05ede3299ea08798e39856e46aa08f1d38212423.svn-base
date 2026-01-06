@@ -1,0 +1,27 @@
+namespace test.concurrency
+using clox.std.io.File
+using clox.std.io.IOException
+
+println("Creating a read stream from a non-existent input file.")
+try { 
+    val fileReader = await File.openAsync("test/others/file_non_exist.txt", "r")
+    println(fileReader)
+}
+catch(IOException e) { 
+    println("Error: ${e.message}")
+}
+finally { 
+    println("Final Cleanup.")
+}
+
+println("Creating a read stream from another non-existent input file.")
+try { 
+    val fileReader2 = await File.openAsync("test/others/file_non_exist_2.txt", "r")
+    println(fileReader2)
+}
+catch(IOException e) { 
+    println("Error again: ${e.message}")
+}
+finally { 
+    println("Final Cleanup.")
+}

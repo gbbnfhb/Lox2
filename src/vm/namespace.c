@@ -158,8 +158,6 @@ InterpretResult runModule(VM* vm, ObjModule* module, bool isRootModule) {
 }
 
 bool loadModule(VM* vm, ObjString* path) {
-    ObjModule* lastModule = vm->currentModule;
-    vm->currentModule = newModule(vm, path);
 
     char* source = readFile(path->chars);
     ObjFunction* function = compile(vm, source);
@@ -169,6 +167,10 @@ bool loadModule(VM* vm, ObjString* path) {
 
     vm->currentModule->closure = newClosure(vm, function);
     pop(vm);
+
+	ObjModule* lastModule = vm->currentModule;
+	vm->currentModule = newModule(vm, path);
+
     InterpretResult result = runModule(vm, vm->currentModule, false);
     vm->currentModule = lastModule;
     return true;

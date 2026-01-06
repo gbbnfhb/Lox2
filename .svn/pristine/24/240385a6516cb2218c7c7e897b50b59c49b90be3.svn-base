@@ -1,0 +1,334 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="17.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="C:\Lox2\main.c" />
+    <ClCompile Include="C:\Lox2\src\common\buffer.c">
+      <Filter>Source Files\common</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Lox2\src\common\os.c">
+      <Filter>Source Files\common</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Lox2\src\compiler\ast.c">
+      <Filter>Source Files\compiler</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Lox2\src\compiler\chunk.c">
+      <Filter>Source Files\compiler</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Lox2\src\compiler\compiler.c">
+      <Filter>Source Files\compiler</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Lox2\src\compiler\lexer.c">
+      <Filter>Source Files\compiler</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Lox2\src\compiler\name.c">
+      <Filter>Source Files\compiler</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Lox2\src\compiler\parser.c">
+      <Filter>Source Files\compiler</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Lox2\src\compiler\resolver.c">
+      <Filter>Source Files\compiler</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Lox2\src\compiler\symbol.c">
+      <Filter>Source Files\compiler</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Lox2\src\compiler\token.c">
+      <Filter>Source Files\compiler</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Lox2\src\compiler\type.c">
+      <Filter>Source Files\compiler</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Lox2\src\compiler\typechecker.c">
+      <Filter>Source Files\compiler</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Lox2\src\inc\ini.c">
+      <Filter>Source Files\inc</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Lox2\src\inc\pcg.c">
+      <Filter>Source Files\inc</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Lox2\src\inc\regex.c">
+      <Filter>Source Files\inc</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Lox2\src\inc\utf8.c">
+      <Filter>Source Files\inc</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Lox2\src\inc\uuid4.c">
+      <Filter>Source Files\inc</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Lox2\src\inc\yuarel.c">
+      <Filter>Source Files\inc</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Lox2\src\std\collection.c">
+      <Filter>Source Files\std</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Lox2\src\std\io.c">
+      <Filter>Source Files\std</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Lox2\src\std\lang.c">
+      <Filter>Source Files\std</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Lox2\src\std\net.c">
+      <Filter>Source Files\std</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Lox2\src\std\util.c">
+      <Filter>Source Files\std</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Lox2\src\vm\assert.c">
+      <Filter>Source Files\vm</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Lox2\src\vm\class.c">
+      <Filter>Source Files\vm</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Lox2\src\vm\date.c">
+      <Filter>Source Files\vm</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Lox2\src\vm\debug.c">
+      <Filter>Source Files\vm</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Lox2\src\vm\dict.c">
+      <Filter>Source Files\vm</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Lox2\src\vm\exception.c">
+      <Filter>Source Files\vm</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Lox2\src\vm\file.c">
+      <Filter>Source Files\vm</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Lox2\src\vm\generator.c">
+      <Filter>Source Files\vm</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Lox2\src\vm\hash.c">
+      <Filter>Source Files\vm</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Lox2\src\vm\http.c">
+      <Filter>Source Files\vm</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Lox2\src\vm\id.c">
+      <Filter>Source Files\vm</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Lox2\src\vm\interceptor.c">
+      <Filter>Source Files\vm</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Lox2\src\vm\loop.c">
+      <Filter>Source Files\vm</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Lox2\src\vm\memory.c">
+      <Filter>Source Files\vm</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Lox2\src\vm\namespace.c">
+      <Filter>Source Files\vm</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Lox2\src\vm\native.c">
+      <Filter>Source Files\vm</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Lox2\src\vm\network.c">
+      <Filter>Source Files\vm</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Lox2\src\vm\object.c">
+      <Filter>Source Files\vm</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Lox2\src\vm\promise.c">
+      <Filter>Source Files\vm</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Lox2\src\vm\shape.c">
+      <Filter>Source Files\vm</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Lox2\src\vm\string.c">
+      <Filter>Source Files\vm</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Lox2\src\vm\table.c">
+      <Filter>Source Files\vm</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Lox2\src\vm\value.c">
+      <Filter>Source Files\vm</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Lox2\src\vm\variable.c">
+      <Filter>Source Files\vm</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Lox2\src\vm\vm.c">
+      <Filter>Source Files\vm</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\lox_raylib_bindings.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="C:\Lox2\src\common\buffer.h">
+      <Filter>Source Files\common</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Lox2\src\common\common.h">
+      <Filter>Source Files\common</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Lox2\src\common\os.h">
+      <Filter>Source Files\common</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Lox2\src\compiler\ast.h">
+      <Filter>Source Files\compiler</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Lox2\src\compiler\chunk.h">
+      <Filter>Source Files\compiler</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Lox2\src\compiler\compiler.h">
+      <Filter>Source Files\compiler</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Lox2\src\compiler\lexer.h">
+      <Filter>Source Files\compiler</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Lox2\src\compiler\name.h">
+      <Filter>Source Files\compiler</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Lox2\src\compiler\parser.h">
+      <Filter>Source Files\compiler</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Lox2\src\compiler\resolver.h">
+      <Filter>Source Files\compiler</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Lox2\src\compiler\symbol.h">
+      <Filter>Source Files\compiler</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Lox2\src\compiler\token.h">
+      <Filter>Source Files\compiler</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Lox2\src\compiler\type.h">
+      <Filter>Source Files\compiler</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Lox2\src\compiler\typechecker.h">
+      <Filter>Source Files\compiler</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Lox2\src\inc\ini.h">
+      <Filter>Source Files\inc</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Lox2\src\inc\pcg.h">
+      <Filter>Source Files\inc</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Lox2\src\inc\regex.h">
+      <Filter>Source Files\inc</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Lox2\src\inc\utf8.h">
+      <Filter>Source Files\inc</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Lox2\src\inc\uuid4.h">
+      <Filter>Source Files\inc</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Lox2\src\inc\yuarel.h">
+      <Filter>Source Files\inc</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Lox2\src\std\collection.h">
+      <Filter>Source Files\std</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Lox2\src\std\io.h">
+      <Filter>Source Files\std</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Lox2\src\std\lang.h">
+      <Filter>Source Files\std</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Lox2\src\std\net.h">
+      <Filter>Source Files\std</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Lox2\src\std\util.h">
+      <Filter>Source Files\std</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Lox2\src\vm\assert.h">
+      <Filter>Source Files\vm</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Lox2\src\vm\class.h">
+      <Filter>Source Files\vm</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Lox2\src\vm\date.h">
+      <Filter>Source Files\vm</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Lox2\src\vm\debug.h">
+      <Filter>Source Files\vm</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Lox2\src\vm\dict.h">
+      <Filter>Source Files\vm</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Lox2\src\vm\exception.h">
+      <Filter>Source Files\vm</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Lox2\src\vm\file.h">
+      <Filter>Source Files\vm</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Lox2\src\vm\generator.h">
+      <Filter>Source Files\vm</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Lox2\src\vm\hash.h">
+      <Filter>Source Files\vm</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Lox2\src\vm\http.h">
+      <Filter>Source Files\vm</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Lox2\src\vm\id.h">
+      <Filter>Source Files\vm</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Lox2\src\vm\interceptor.h">
+      <Filter>Source Files\vm</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Lox2\src\vm\loop.h">
+      <Filter>Source Files\vm</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Lox2\src\vm\memory.h">
+      <Filter>Source Files\vm</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Lox2\src\vm\namespace.h">
+      <Filter>Source Files\vm</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Lox2\src\vm\native.h">
+      <Filter>Source Files\vm</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Lox2\src\vm\network.h">
+      <Filter>Source Files\vm</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Lox2\src\vm\object.h">
+      <Filter>Source Files\vm</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Lox2\src\vm\promise.h">
+      <Filter>Source Files\vm</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Lox2\src\vm\shape.h">
+      <Filter>Source Files\vm</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Lox2\src\vm\string.h">
+      <Filter>Source Files\vm</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Lox2\src\vm\table.h">
+      <Filter>Source Files\vm</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Lox2\src\vm\value.h">
+      <Filter>Source Files\vm</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Lox2\src\vm\variable.h">
+      <Filter>Source Files\vm</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Lox2\src\vm\vm.h">
+      <Filter>Source Files\vm</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="C:\Lox2\CMakeLists.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="C:\Lox2\lox2.ini" />
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{0DBBFE7A-68C7-3892-9E98-B337EC7AEE7A}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\common">
+      <UniqueIdentifier>{067B14B4-7DB3-390E-88DB-B628299063E0}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\compiler">
+      <UniqueIdentifier>{81CEC787-92C5-3775-A0FC-58A86E1B0B2C}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\inc">
+      <UniqueIdentifier>{EF817C9C-EE53-31B2-B1AC-E07FACEEAD5E}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\std">
+      <UniqueIdentifier>{48692F59-8D46-36E6-8F44-D7CF6B9F5B28}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\vm">
+      <UniqueIdentifier>{4891FBCB-7ED3-3877-9B3D-5C40AA6AE6AB}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>

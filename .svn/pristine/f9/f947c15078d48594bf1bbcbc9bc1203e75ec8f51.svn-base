@@ -1,0 +1,356 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="17.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <PreferredToolArchitecture>x64</PreferredToolArchitecture>
+  </PropertyGroup>
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{752B6F00-5EE6-36F3-98E6-5C3C5F1A616F}</ProjectGuid>
+    <Keyword>Win32Proj</Keyword>
+    <VcpkgEnabled>false</VcpkgEnabled>
+    <WindowsTargetPlatformVersion>10.0.22621.0</WindowsTargetPlatformVersion>
+    <Platform>x64</Platform>
+    <ProjectName>Lox2</ProjectName>
+    <VCProjectUpgraderObjectName>NoUpgrade</VCProjectUpgraderObjectName>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <CharacterSet>Unicode</CharacterSet>
+    <PlatformToolset>v143</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <CharacterSet>Unicode</CharacterSet>
+    <PlatformToolset>v143</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets">
+    <Import Project="do_not_import_user.props" Condition="exists('do_not_import_user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <_ProjectFileVersion>10.0.20506.1</_ProjectFileVersion>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\Lox2\x64\Debug\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Lox2.dir\Debug\</IntDir>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Lox2</TargetName>
+    <TargetExt Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">.exe</TargetExt>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</LinkIncremental>
+    <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</GenerateManifest>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:\Lox2\x64\Release\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Lox2.dir\Release\</IntDir>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Lox2</TargetName>
+    <TargetExt Condition="'$(Configuration)|$(Platform)'=='Release|x64'">.exe</TargetExt>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    </LinkIncremental>
+    <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</GenerateManifest>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <AdditionalOptions>%(AdditionalOptions) /external:I "C:/Lox2/build/vcpkg_installed/x64-windows/include"</AdditionalOptions>
+      <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
+      <BasicRuntimeChecks>Default</BasicRuntimeChecks>
+      <ConformanceMode>true</ConformanceMode>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <DisableSpecificWarnings>26451</DisableSpecificWarnings>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <ExternalWarningLevel>TurnOffAllWarnings</ExternalWarningLevel>
+      <MinimalRebuild>
+      </MinimalRebuild>
+      <Optimization>
+      </Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <SDLCheck>true</SDLCheck>
+      <SupportJustMyCode>
+      </SupportJustMyCode>
+      <UseFullPaths>false</UseFullPaths>
+      <WarningLevel>Level3</WarningLevel>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);_DEBUG;_CONSOLE;UNICODE;_UNICODE;USING_UV_SHARED=1;CMAKE_INTDIR="Debug"</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+      <ScanSourceForModuleDependencies>false</ScanSourceForModuleDependencies>
+      <AdditionalIncludeDirectories>c:\raylib-5.5\src</AdditionalIncludeDirectories>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_DEBUG;_CONSOLE;UNICODE;_UNICODE;USING_UV_SHARED=1;CMAKE_INTDIR=\"Debug\"</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>C:\Lox2\build\vcpkg_installed\x64-windows\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>C:\Lox2\build\vcpkg_installed\x64-windows\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <PostBuildEvent>
+      <Message>
+      </Message>
+      <Command>setlocal
+"C:\Program Files\PowerShell\7\pwsh.exe" -noprofile -executionpolicy Bypass -file C:/dev/vcpkg/scripts/buildsystems/msbuild/applocal.ps1 -targetBinary C:/Lox2/x64/Debug/Lox2.exe -installedDir C:/Lox2/build/vcpkg_installed/x64-windows/debug/bin -OutVariable out
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd
+setlocal
+C:\CMake\bin\cmake.exe -E copy_if_different C:/Lox2/lox2.ini C:/Lox2/x64/Debug
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+    </PostBuildEvent>
+    <Link>
+      <AdditionalDependencies>vcpkg_installed\x64-windows\debug\lib\libcurl-d.lib;vcpkg_installed\x64-windows\debug\lib\uv.lib;psapi.lib;user32.lib;advapi32.lib;iphlpapi.lib;userenv.lib;ws2_32.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib</AdditionalDependencies>
+      <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <IgnoreSpecificDefaultLibraries>%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
+      <ImportLibrary>C:/Lox2/x64/Debug/Lox2.lib</ImportLibrary>
+      <ProgramDataBaseFile>C:/Lox2/x64/Debug/Lox2.pdb</ProgramDataBaseFile>
+      <SubSystem>Console</SubSystem>
+    </Link>
+    <ProjectReference>
+      <LinkLibraryDependencies>false</LinkLibraryDependencies>
+    </ProjectReference>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <AdditionalOptions>%(AdditionalOptions) /external:I "C:/Lox2/build/vcpkg_installed/x64-windows/include"</AdditionalOptions>
+      <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
+      <BasicRuntimeChecks>Default</BasicRuntimeChecks>
+      <ConformanceMode>true</ConformanceMode>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <ExternalWarningLevel>TurnOffAllWarnings</ExternalWarningLevel>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <MinimalRebuild>
+      </MinimalRebuild>
+      <Optimization>
+      </Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <SDLCheck>true</SDLCheck>
+      <SupportJustMyCode>
+      </SupportJustMyCode>
+      <UseFullPaths>false</UseFullPaths>
+      <WarningLevel>Level3</WarningLevel>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);NDEBUG;_CONSOLE;UNICODE;_UNICODE;USING_UV_SHARED=1;CMAKE_INTDIR="Release"</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+      <ScanSourceForModuleDependencies>false</ScanSourceForModuleDependencies>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;NDEBUG;_CONSOLE;UNICODE;_UNICODE;USING_UV_SHARED=1;CMAKE_INTDIR=\"Release\"</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>C:\Lox2\build\vcpkg_installed\x64-windows\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>C:\Lox2\build\vcpkg_installed\x64-windows\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <PostBuildEvent>
+      <Message>
+      </Message>
+      <Command>setlocal
+"C:\Program Files\PowerShell\7\pwsh.exe" -noprofile -executionpolicy Bypass -file C:/dev/vcpkg/scripts/buildsystems/msbuild/applocal.ps1 -targetBinary C:/Lox2/x64/Release/Lox2.exe -installedDir C:/Lox2/build/vcpkg_installed/x64-windows/bin -OutVariable out
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd
+setlocal
+C:\CMake\bin\cmake.exe -E copy_if_different C:/Lox2/lox2.ini C:/Lox2/x64/Release
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+    </PostBuildEvent>
+    <Link>
+      <AdditionalDependencies>vcpkg_installed\x64-windows\lib\libcurl.lib;vcpkg_installed\x64-windows\lib\uv.lib;psapi.lib;user32.lib;advapi32.lib;iphlpapi.lib;userenv.lib;ws2_32.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib</AdditionalDependencies>
+      <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <IgnoreSpecificDefaultLibraries>%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
+      <ImportLibrary>C:/Lox2/x64/Release/Lox2.lib</ImportLibrary>
+      <OptimizeReferences>true</OptimizeReferences>
+      <ProgramDataBaseFile>C:/Lox2/x64/Release/Lox2.pdb</ProgramDataBaseFile>
+      <SubSystem>Console</SubSystem>
+    </Link>
+    <ProjectReference>
+      <LinkLibraryDependencies>false</LinkLibraryDependencies>
+    </ProjectReference>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <CustomBuild Include="C:\Lox2\CMakeLists.txt">
+      <UseUtf8Encoding>Always</UseUtf8Encoding>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Building Custom Rule C:/Lox2/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">setlocal
+C:\CMake\bin\cmake.exe -SC:/Lox2 -BC:/Lox2/build --check-stamp-file C:/Lox2/build/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\CMake\share\cmake-3.30\Modules\CMakeCInformation.cmake;C:\CMake\share\cmake-3.30\Modules\CMakeCommonLanguageInclude.cmake;C:\CMake\share\cmake-3.30\Modules\CMakeDependentOption.cmake;C:\CMake\share\cmake-3.30\Modules\CMakeFindDependencyMacro.cmake;C:\CMake\share\cmake-3.30\Modules\CMakeGenericSystem.cmake;C:\CMake\share\cmake-3.30\Modules\CMakeInitializeConfigs.cmake;C:\CMake\share\cmake-3.30\Modules\CMakeLanguageInformation.cmake;C:\CMake\share\cmake-3.30\Modules\CMakeRCInformation.cmake;C:\CMake\share\cmake-3.30\Modules\CMakeSystemSpecificInformation.cmake;C:\CMake\share\cmake-3.30\Modules\CMakeSystemSpecificInitialize.cmake;C:\CMake\share\cmake-3.30\Modules\Compiler\CMakeCommonCompilerMacros.cmake;C:\CMake\share\cmake-3.30\Modules\Compiler\MSVC-C.cmake;C:\CMake\share\cmake-3.30\Modules\Compiler\MSVC.cmake;C:\CMake\share\cmake-3.30\Modules\FindPackageHandleStandardArgs.cmake;C:\CMake\share\cmake-3.30\Modules\FindPackageMessage.cmake;C:\CMake\share\cmake-3.30\Modules\FindZLIB.cmake;C:\CMake\share\cmake-3.30\Modules\Platform\Windows-Initialize.cmake;C:\CMake\share\cmake-3.30\Modules\Platform\Windows-MSVC-C.cmake;C:\CMake\share\cmake-3.30\Modules\Platform\Windows-MSVC.cmake;C:\CMake\share\cmake-3.30\Modules\Platform\Windows.cmake;C:\CMake\share\cmake-3.30\Modules\Platform\WindowsPaths.cmake;C:\CMake\share\cmake-3.30\Modules\SelectLibraryConfigurations.cmake;C:\Lox2\CMake\Default.cmake;C:\Lox2\CMake\DefaultCXX.cmake;C:\Lox2\CMake\Utils.cmake;C:\Lox2\build\CMakeFiles\3.30.7\CMakeCCompiler.cmake;C:\Lox2\build\CMakeFiles\3.30.7\CMakeRCCompiler.cmake;C:\Lox2\build\CMakeFiles\3.30.7\CMakeSystem.cmake;C:\Lox2\build\vcpkg_installed\x64-windows\share\curl\CURLConfig.cmake;C:\Lox2\build\vcpkg_installed\x64-windows\share\curl\CURLConfigVersion.cmake;C:\Lox2\build\vcpkg_installed\x64-windows\share\curl\CURLTargets-debug.cmake;C:\Lox2\build\vcpkg_installed\x64-windows\share\curl\CURLTargets-release.cmake;C:\Lox2\build\vcpkg_installed\x64-windows\share\curl\CURLTargets.cmake;C:\Lox2\build\vcpkg_installed\x64-windows\share\curl\vcpkg-cmake-wrapper.cmake;C:\Lox2\build\vcpkg_installed\x64-windows\share\libuv\libuvConfig-debug.cmake;C:\Lox2\build\vcpkg_installed\x64-windows\share\libuv\libuvConfig-release.cmake;C:\Lox2\build\vcpkg_installed\x64-windows\share\libuv\libuvConfig.cmake;C:\Lox2\build\vcpkg_installed\x64-windows\share\zlib\vcpkg-cmake-wrapper.cmake;C:\Lox2\vcpkg-configuration.json;C:\Lox2\vcpkg.json;C:\dev\vcpkg\scripts\buildsystems\vcpkg.cmake;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\Lox2\build\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Building Custom Rule C:/Lox2/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">setlocal
+C:\CMake\bin\cmake.exe -SC:/Lox2 -BC:/Lox2/build --check-stamp-file C:/Lox2/build/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:\CMake\share\cmake-3.30\Modules\CMakeCInformation.cmake;C:\CMake\share\cmake-3.30\Modules\CMakeCommonLanguageInclude.cmake;C:\CMake\share\cmake-3.30\Modules\CMakeDependentOption.cmake;C:\CMake\share\cmake-3.30\Modules\CMakeFindDependencyMacro.cmake;C:\CMake\share\cmake-3.30\Modules\CMakeGenericSystem.cmake;C:\CMake\share\cmake-3.30\Modules\CMakeInitializeConfigs.cmake;C:\CMake\share\cmake-3.30\Modules\CMakeLanguageInformation.cmake;C:\CMake\share\cmake-3.30\Modules\CMakeRCInformation.cmake;C:\CMake\share\cmake-3.30\Modules\CMakeSystemSpecificInformation.cmake;C:\CMake\share\cmake-3.30\Modules\CMakeSystemSpecificInitialize.cmake;C:\CMake\share\cmake-3.30\Modules\Compiler\CMakeCommonCompilerMacros.cmake;C:\CMake\share\cmake-3.30\Modules\Compiler\MSVC-C.cmake;C:\CMake\share\cmake-3.30\Modules\Compiler\MSVC.cmake;C:\CMake\share\cmake-3.30\Modules\FindPackageHandleStandardArgs.cmake;C:\CMake\share\cmake-3.30\Modules\FindPackageMessage.cmake;C:\CMake\share\cmake-3.30\Modules\FindZLIB.cmake;C:\CMake\share\cmake-3.30\Modules\Platform\Windows-Initialize.cmake;C:\CMake\share\cmake-3.30\Modules\Platform\Windows-MSVC-C.cmake;C:\CMake\share\cmake-3.30\Modules\Platform\Windows-MSVC.cmake;C:\CMake\share\cmake-3.30\Modules\Platform\Windows.cmake;C:\CMake\share\cmake-3.30\Modules\Platform\WindowsPaths.cmake;C:\CMake\share\cmake-3.30\Modules\SelectLibraryConfigurations.cmake;C:\Lox2\CMake\Default.cmake;C:\Lox2\CMake\DefaultCXX.cmake;C:\Lox2\CMake\Utils.cmake;C:\Lox2\build\CMakeFiles\3.30.7\CMakeCCompiler.cmake;C:\Lox2\build\CMakeFiles\3.30.7\CMakeRCCompiler.cmake;C:\Lox2\build\CMakeFiles\3.30.7\CMakeSystem.cmake;C:\Lox2\build\vcpkg_installed\x64-windows\share\curl\CURLConfig.cmake;C:\Lox2\build\vcpkg_installed\x64-windows\share\curl\CURLConfigVersion.cmake;C:\Lox2\build\vcpkg_installed\x64-windows\share\curl\CURLTargets-debug.cmake;C:\Lox2\build\vcpkg_installed\x64-windows\share\curl\CURLTargets-release.cmake;C:\Lox2\build\vcpkg_installed\x64-windows\share\curl\CURLTargets.cmake;C:\Lox2\build\vcpkg_installed\x64-windows\share\curl\vcpkg-cmake-wrapper.cmake;C:\Lox2\build\vcpkg_installed\x64-windows\share\libuv\libuvConfig-debug.cmake;C:\Lox2\build\vcpkg_installed\x64-windows\share\libuv\libuvConfig-release.cmake;C:\Lox2\build\vcpkg_installed\x64-windows\share\libuv\libuvConfig.cmake;C:\Lox2\build\vcpkg_installed\x64-windows\share\zlib\vcpkg-cmake-wrapper.cmake;C:\Lox2\vcpkg-configuration.json;C:\Lox2\vcpkg.json;C:\dev\vcpkg\scripts\buildsystems\vcpkg.cmake;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:\Lox2\build\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</LinkObjects>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="C:\Lox2\lox2.ini">
+    </None>
+    <ClCompile Include="..\src\vector3.c" />
+    <ClCompile Include="C:\Lox2\main.c" />
+    <ClCompile Include="C:\Lox2\src\common\buffer.c" />
+    <ClInclude Include="C:\Lox2\src\common\buffer.h" />
+    <ClInclude Include="C:\Lox2\src\common\common.h" />
+    <ClCompile Include="C:\Lox2\src\common\os.c" />
+    <ClInclude Include="C:\Lox2\src\common\os.h" />
+    <ClCompile Include="C:\Lox2\src\compiler\ast.c" />
+    <ClInclude Include="C:\Lox2\src\compiler\ast.h" />
+    <ClCompile Include="C:\Lox2\src\compiler\chunk.c" />
+    <ClInclude Include="C:\Lox2\src\compiler\chunk.h" />
+    <ClCompile Include="C:\Lox2\src\compiler\compiler.c" />
+    <ClInclude Include="C:\Lox2\src\compiler\compiler.h" />
+    <ClCompile Include="C:\Lox2\src\compiler\lexer.c" />
+    <ClInclude Include="C:\Lox2\src\compiler\lexer.h" />
+    <ClCompile Include="C:\Lox2\src\compiler\name.c" />
+    <ClInclude Include="C:\Lox2\src\compiler\name.h" />
+    <ClCompile Include="C:\Lox2\src\compiler\parser.c" />
+    <ClInclude Include="C:\Lox2\src\compiler\parser.h" />
+    <ClCompile Include="C:\Lox2\src\compiler\resolver.c" />
+    <ClInclude Include="C:\Lox2\src\compiler\resolver.h" />
+    <ClCompile Include="C:\Lox2\src\compiler\symbol.c" />
+    <ClInclude Include="C:\Lox2\src\compiler\symbol.h" />
+    <ClCompile Include="C:\Lox2\src\compiler\token.c" />
+    <ClInclude Include="C:\Lox2\src\compiler\token.h" />
+    <ClCompile Include="C:\Lox2\src\compiler\type.c" />
+    <ClInclude Include="C:\Lox2\src\compiler\type.h" />
+    <ClCompile Include="C:\Lox2\src\compiler\typechecker.c" />
+    <ClInclude Include="C:\Lox2\src\compiler\typechecker.h" />
+    <ClCompile Include="C:\Lox2\src\inc\ini.c" />
+    <ClInclude Include="C:\Lox2\src\inc\ini.h" />
+    <ClCompile Include="C:\Lox2\src\inc\pcg.c" />
+    <ClInclude Include="C:\Lox2\src\inc\pcg.h" />
+    <ClCompile Include="C:\Lox2\src\inc\regex.c" />
+    <ClInclude Include="C:\Lox2\src\inc\regex.h" />
+    <ClCompile Include="C:\Lox2\src\inc\utf8.c" />
+    <ClInclude Include="C:\Lox2\src\inc\utf8.h" />
+    <ClCompile Include="C:\Lox2\src\inc\uuid4.c" />
+    <ClInclude Include="C:\Lox2\src\inc\uuid4.h" />
+    <ClCompile Include="C:\Lox2\src\inc\yuarel.c" />
+    <ClInclude Include="C:\Lox2\src\inc\yuarel.h" />
+    <ClCompile Include="C:\Lox2\src\std\collection.c" />
+    <ClInclude Include="C:\Lox2\src\std\collection.h" />
+    <ClCompile Include="C:\Lox2\src\std\io.c" />
+    <ClInclude Include="C:\Lox2\src\std\io.h" />
+    <ClCompile Include="C:\Lox2\src\std\lang.c" />
+    <ClInclude Include="C:\Lox2\src\std\lang.h" />
+    <ClCompile Include="C:\Lox2\src\std\net.c" />
+    <ClInclude Include="C:\Lox2\src\std\net.h" />
+    <ClCompile Include="C:\Lox2\src\std\util.c" />
+    <ClInclude Include="C:\Lox2\src\std\util.h" />
+    <ClCompile Include="C:\Lox2\src\vm\assert.c" />
+    <ClInclude Include="C:\Lox2\src\vm\assert.h" />
+    <ClCompile Include="C:\Lox2\src\vm\class.c" />
+    <ClInclude Include="C:\Lox2\src\vm\class.h" />
+    <ClCompile Include="C:\Lox2\src\vm\date.c" />
+    <ClInclude Include="C:\Lox2\src\vm\date.h" />
+    <ClCompile Include="C:\Lox2\src\vm\debug.c" />
+    <ClInclude Include="C:\Lox2\src\vm\debug.h" />
+    <ClCompile Include="C:\Lox2\src\vm\dict.c" />
+    <ClInclude Include="C:\Lox2\src\vm\dict.h" />
+    <ClCompile Include="C:\Lox2\src\vm\exception.c" />
+    <ClInclude Include="C:\Lox2\src\vm\exception.h" />
+    <ClCompile Include="C:\Lox2\src\vm\file.c" />
+    <ClInclude Include="C:\Lox2\src\vm\file.h" />
+    <ClCompile Include="C:\Lox2\src\vm\generator.c" />
+    <ClInclude Include="C:\Lox2\src\vm\generator.h" />
+    <ClCompile Include="C:\Lox2\src\vm\hash.c" />
+    <ClInclude Include="C:\Lox2\src\vm\hash.h" />
+    <ClCompile Include="C:\Lox2\src\vm\http.c" />
+    <ClInclude Include="C:\Lox2\src\vm\http.h" />
+    <ClCompile Include="C:\Lox2\src\vm\id.c" />
+    <ClInclude Include="C:\Lox2\src\vm\id.h" />
+    <ClCompile Include="C:\Lox2\src\vm\interceptor.c" />
+    <ClInclude Include="C:\Lox2\src\vm\interceptor.h" />
+    <ClCompile Include="C:\Lox2\src\vm\loop.c" />
+    <ClInclude Include="C:\Lox2\src\vm\loop.h" />
+    <ClCompile Include="C:\Lox2\src\vm\memory.c" />
+    <ClInclude Include="C:\Lox2\src\vm\memory.h" />
+    <ClCompile Include="C:\Lox2\src\vm\namespace.c" />
+    <ClInclude Include="C:\Lox2\src\vm\namespace.h" />
+    <ClCompile Include="C:\Lox2\src\vm\native.c" />
+    <ClInclude Include="C:\Lox2\src\vm\native.h" />
+    <ClCompile Include="C:\Lox2\src\vm\network.c" />
+    <ClInclude Include="C:\Lox2\src\vm\network.h" />
+    <ClCompile Include="C:\Lox2\src\vm\object.c" />
+    <ClInclude Include="C:\Lox2\src\vm\object.h" />
+    <ClCompile Include="C:\Lox2\src\vm\promise.c" />
+    <ClInclude Include="C:\Lox2\src\vm\promise.h" />
+    <ClCompile Include="C:\Lox2\src\vm\shape.c" />
+    <ClInclude Include="C:\Lox2\src\vm\shape.h" />
+    <ClCompile Include="C:\Lox2\src\vm\string.c" />
+    <ClInclude Include="C:\Lox2\src\vm\string.h" />
+    <ClCompile Include="C:\Lox2\src\vm\table.c" />
+    <ClInclude Include="C:\Lox2\src\vm\table.h" />
+    <ClCompile Include="C:\Lox2\src\vm\value.c" />
+    <ClInclude Include="C:\Lox2\src\vm\value.h" />
+    <ClCompile Include="C:\Lox2\src\vm\variable.c" />
+    <ClInclude Include="C:\Lox2\src\vm\variable.h" />
+    <ClCompile Include="C:\Lox2\src\vm\vm.c" />
+    <ClInclude Include="C:\Lox2\src\vm\vm.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="C:\Lox2\build\ZERO_CHECK.vcxproj">
+      <Project>{E4CE1475-DA1C-3995-8A68-737D654F5923}</Project>
+      <Name>ZERO_CHECK</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

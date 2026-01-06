@@ -1,0 +1,39 @@
+namespace test.lang
+
+val z = 0
+fun outer() {
+  val x = "value"
+  val y = "value2"
+  fun middle() {
+    println(x)
+    fun inner() {
+      println(y)
+    }
+
+    println("create inner closure")
+    return inner
+  }
+
+  println("return from outer")
+  return middle
+}
+
+val mid = outer()
+val in = mid()
+in()
+
+print("Class of function 'in()' is: ")
+println(in.getClassName())
+print("Name of function 'in()' is: ")
+println(in.name())
+print("function 'in()' is anonymous: ")
+println(in.isAnonymous())
+print("function 'in()' is native: ")
+println(in.isNative())
+
+val time = clock
+println("Assinging variable 'time' as native function 'clock'...")
+print("Class of function 'time()' is: ")
+println(time.getClassName())
+print("function 'time()' is native: ")
+println(time.isNative())

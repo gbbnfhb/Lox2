@@ -1,0 +1,27 @@
+using  clox.FFI.Library
+using  clox.FFI.FFIFunction
+
+// "ffi" はインタプリタによって提供されるグローバルオブジェクトと仮定する。
+// ライブラリを開く。ffiオブジェクトのopenメソッドを呼び出す。
+var lib = loadLibrary("./test/ffi/add.dll"); // Windowsの場合は "./add.dll"
+
+if (lib.equals(nil)){
+  println ("Failed to open library.");
+  // スクリプトの実行をここで止めたい場合、
+  // error()のような関数が提供されていればそれを使うか、
+  // returnで抜けることになる。
+  //return; 
+}else{
+  println ("Success to open library.");
+}
+
+
+// ffiオブジェクトのcfuncメソッドで、C関数のシグネチャを定義する。
+var add_func = lib.getFunction("add", "int", ["int", "int"]);
+
+// 作成されたLox関数を呼び出す。
+var result = add_func(10, 20);
+println ("The result is: "); // -> The result is: 30
+println(result);
+// ライブラリを閉じる。
+lib.close();

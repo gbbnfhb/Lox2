@@ -1,0 +1,22 @@
+namespace test.lang
+
+class CoffeeMaker {
+
+    __init__(coffee){ 
+        this.coffee = coffee
+    }
+
+    brew(){
+        println("Enjoy your cup of " + this.coffee)
+
+        //no reusing the grounds!
+        this.coffee = nil
+    }
+
+    debug() { 
+        println("this is a coffee maker.")
+    }
+}
+
+val maker = CoffeeMaker("coffee and chicory")
+maker.brew()

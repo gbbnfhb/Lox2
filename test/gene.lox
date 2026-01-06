@@ -1,0 +1,39 @@
+// Mýsidia言語
+
+fun statefulGenerator() {
+  println("--- Generator started! ---");
+  var counter = 100;
+
+  for (val i : 1..3) {
+    println("  - Inside loop, before yield. i = " + i.toString() + ", counter = " + counter.toString());
+    yield counter;
+    println("  - Inside loop, after yield. Resuming with i = " + i.toString());
+    counter = counter + 10;
+  }
+
+  println("--- Generator finished! ---");
+  yield "Done";
+}
+
+
+// --- ここから実行部分 ---
+
+// ジェネレータオブジェクトを作成
+val myGenerator = statefulGenerator();
+println("Generator object created. Nothing has happened yet.");
+println("");
+
+// whileループと .nextFinished() を使ってジェネレータを最後まで実行する
+var i = 1
+while (!myGenerator.nextFinished()) {
+  println("Calling .next() #" + i.toString() + "...");
+  
+  // .next()を呼び出し、その戻り値である「結果オブジェクト」の .value プロパティにアクセスする
+  val yieldedValue = myGenerator.next().value;
+  
+  println("Yielded value: " + yieldedValue.toString());
+  println("");
+  i = i + 1;
+}
+
+println("--- Loop has finished because .nextFinished() is now true. ---");

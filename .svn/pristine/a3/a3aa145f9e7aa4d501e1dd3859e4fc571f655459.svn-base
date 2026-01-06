@@ -1,0 +1,40 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Lox2\\build\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{752B6F00-5EE6-36F3-98E6-5C3C5F1A616F}|Lox2.vcxproj|C:\\Lox2\\src\\lox_raylib_bindings.c||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 1,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:1:0:{e8b06f52-6d01-11d2-aa7d-00c04f990343}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "lox_raylib_bindings.c",
+              "DocumentMoniker": "C:\\Lox2\\src\\lox_raylib_bindings.c",
+              "RelativeDocumentMoniker": "..\\src\\lox_raylib_bindings.c",
+              "ToolTip": "C:\\Lox2\\src\\lox_raylib_bindings.c",
+              "RelativeToolTip": "..\\src\\lox_raylib_bindings.c",
+              "ViewState": "AgIAACEAAAAAAAAAAAAAACEAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000423|",
+              "WhenOpened": "2025-10-17T00:55:04.601Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

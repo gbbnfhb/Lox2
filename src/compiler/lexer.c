@@ -70,8 +70,9 @@ static Token errorToken(Lexer* lexer, const char* message) {
         .line = lexer->line
     };
 
-    fprintf(stderr, "[line %d] Lex Error: %s\n", token.length, message);
-    lexer->hadError = true;
+//	fprintf(stderr, "[line %d] Lex Error: %s\n", token.length, message);
+	fprintf(stderr, "[line %d] Lex Error: %s\n", lexer->line, message);
+	lexer->hadError = true;
     return token;
 }
 

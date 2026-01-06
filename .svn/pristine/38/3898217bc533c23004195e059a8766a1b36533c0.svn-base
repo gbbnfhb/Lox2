@@ -1,0 +1,166 @@
+Fetching registry information from https://github.com/microsoft/vcpkg (HEAD)...
+Detecting compiler hash for triplet x64-windows...
+Compiler found: C:/Program Files/Microsoft Visual Studio/2022/Community/VC/Tools/MSVC/14.44.35207/bin/Hostx64/x64/cl.exe
+The following packages will be built and installed:
+    curl[core,non-http,schannel,ssl,sspi]:x64-windows@8.1.2 -- git+https://github.com/microsoft/vcpkg@b70ded19f70e4b198d8c3f844324c7884d3faa7d
+    libuv:x64-windows@1.44.2 -- git+https://github.com/microsoft/vcpkg@dad61360b9c0fb825e23a4ccc01dcd9658e2f253
+  * vcpkg-cmake:x64-windows@2023-05-04 -- git+https://github.com/microsoft/vcpkg@88a7058fc7fa73a9c4c99cfcae9d79e2abf87a5a
+  * vcpkg-cmake-config:x64-windows@2022-02-06#1 -- git+https://github.com/microsoft/vcpkg@8d54cc4f487d51b655abec5f9c9c3f86ca83311f
+  * zlib:x64-windows@1.2.13 -- git+https://github.com/microsoft/vcpkg@ad5a49006f73b45b715299515f31164131b51982
+Additional packages (*) will be modified to complete this operation.
+Restored 0 package(s) from C:\Users\ebi\AppData\Local\vcpkg\archives in 1.27 ms. Use --debug to see more details.
+Installing 1/5 vcpkg-cmake:x64-windows@2023-05-04...
+Building vcpkg-cmake:x64-windows@2023-05-04...
+C:\Users\ebi\AppData\Local\vcpkg\registries\git-trees\88a7058fc7fa73a9c4c99cfcae9d79e2abf87a5a: info: installing from git registry git+https://github.com/microsoft/vcpkg@88a7058fc7fa73a9c4c99cfcae9d79e2abf87a5a
+-- Installing: C:/dev/vcpkg/packages/vcpkg-cmake_x64-windows/share/vcpkg-cmake/vcpkg_cmake_configure.cmake
+-- Installing: C:/dev/vcpkg/packages/vcpkg-cmake_x64-windows/share/vcpkg-cmake/vcpkg_cmake_build.cmake
+-- Installing: C:/dev/vcpkg/packages/vcpkg-cmake_x64-windows/share/vcpkg-cmake/vcpkg_cmake_install.cmake
+-- Installing: C:/dev/vcpkg/packages/vcpkg-cmake_x64-windows/share/vcpkg-cmake/vcpkg-port-config.cmake
+-- Installing: C:/dev/vcpkg/packages/vcpkg-cmake_x64-windows/share/vcpkg-cmake/copyright
+-- Performing post-build validation
+Starting submission of vcpkg-cmake:x64-windows@2023-05-04 to 1 binary cache(s) in the background
+Elapsed time to handle vcpkg-cmake:x64-windows: 370 ms
+vcpkg-cmake:x64-windows package ABI: c653adaa991379043362aaea9ed7696084f519bfc0e04f69c4c42dd51aef4d51
+Installing 2/5 zlib:x64-windows@1.2.13...
+Building zlib:x64-windows@1.2.13...
+C:\Users\ebi\AppData\Local\vcpkg\registries\git-trees\ad5a49006f73b45b715299515f31164131b51982: info: installing from git registry git+https://github.com/microsoft/vcpkg@ad5a49006f73b45b715299515f31164131b51982
+Downloading https://github.com/madler/zlib/archive/v1.2.13.tar.gz -> madler-zlib-v1.2.13.tar.gz
+Successfully downloaded madler-zlib-v1.2.13.tar.gz
+-- Extracting source C:/dev/vcpkg/downloads/madler-zlib-v1.2.13.tar.gz
+-- Applying patch 0001-Prevent-invalid-inclusions-when-HAVE_-is-set-to-0.patch
+-- Applying patch 0002-skip-building-examples.patch
+-- Applying patch 0003-build-static-or-shared-not-both.patch
+-- Applying patch 0004-android-and-mingw-fixes.patch
+-- Using source at C:/dev/vcpkg/buildtrees/zlib/src/v1.2.13-f30d2a168d.clean
+-- Configuring x64-windows
+-- Building x64-windows-dbg
+-- Building x64-windows-rel
+-- Installing: C:/dev/vcpkg/packages/zlib_x64-windows/share/zlib/vcpkg-cmake-wrapper.cmake
+-- Fixing pkgconfig file: C:/dev/vcpkg/packages/zlib_x64-windows/lib/pkgconfig/zlib.pc
+-- Using cached msys2-mingw-w64-x86_64-pkgconf-1~2.4.3-1-any.pkg.tar.zst
+-- Using cached msys2-msys2-runtime-3.6.2-2-x86_64.pkg.tar.zst
+-- Using msys root at C:/dev/vcpkg/downloads/tools/msys2/9272adbcaf19caef
+-- Fixing pkgconfig file: C:/dev/vcpkg/packages/zlib_x64-windows/debug/lib/pkgconfig/zlib.pc
+-- Installing: C:/dev/vcpkg/packages/zlib_x64-windows/share/zlib/copyright
+-- Performing post-build validation
+Starting submission of zlib:x64-windows@1.2.13 to 1 binary cache(s) in the background
+Elapsed time to handle zlib:x64-windows: 20 s
+zlib:x64-windows package ABI: c620462c29085d0ef035d978a824ed83e47d14117a25ff0f6d6f8cb4a8806696
+Completed submission of vcpkg-cmake:x64-windows@2023-05-04 to 1 binary cache(s) in 114 ms
+Installing 3/5 vcpkg-cmake-config:x64-windows@2022-02-06#1...
+Building vcpkg-cmake-config:x64-windows@2022-02-06#1...
+C:\Users\ebi\AppData\Local\vcpkg\registries\git-trees\8d54cc4f487d51b655abec5f9c9c3f86ca83311f: info: installing from git registry git+https://github.com/microsoft/vcpkg@8d54cc4f487d51b655abec5f9c9c3f86ca83311f
+-- Installing: C:/dev/vcpkg/packages/vcpkg-cmake-config_x64-windows/share/vcpkg-cmake-config/vcpkg_cmake_config_fixup.cmake
+-- Installing: C:/dev/vcpkg/packages/vcpkg-cmake-config_x64-windows/share/vcpkg-cmake-config/vcpkg-port-config.cmake
+-- Installing: C:/dev/vcpkg/packages/vcpkg-cmake-config_x64-windows/share/vcpkg-cmake-config/copyright
+-- Skipping post-build validation due to VCPKG_POLICY_EMPTY_PACKAGE
+Starting submission of vcpkg-cmake-config:x64-windows@2022-02-06#1 to 1 binary cache(s) in the background
+Elapsed time to handle vcpkg-cmake-config:x64-windows: 321 ms
+vcpkg-cmake-config:x64-windows package ABI: a27bbd94305f5797b1915473b2c4206b356eb7ce071f879e8d7727acfc558ae2
+Installing 4/5 curl[core,non-http,schannel,ssl,sspi]:x64-windows@8.1.2...
+Building curl[core,non-http,schannel,ssl,sspi]:x64-windows@8.1.2...
+C:\Users\ebi\AppData\Local\vcpkg\registries\git-trees\b70ded19f70e4b198d8c3f844324c7884d3faa7d: info: installing from git registry git+https://github.com/microsoft/vcpkg@b70ded19f70e4b198d8c3f844324c7884d3faa7d
+Downloading https://github.com/curl/curl/archive/curl-8_1_2.tar.gz -> curl-curl-curl-8_1_2.tar.gz
+Successfully downloaded curl-curl-curl-8_1_2.tar.gz
+-- Extracting source C:/dev/vcpkg/downloads/curl-curl-curl-8_1_2.tar.gz
+-- Applying patch 0002_fix_uwp.patch
+-- Applying patch 0005_remove_imp_suffix.patch
+-- Applying patch 0012-fix-dependency-idn2.patch
+-- Applying patch 0020-fix-pc-file.patch
+-- Applying patch 0022-deduplicate-libs.patch
+-- Applying patch mbedtls-ws2_32.patch
+-- Applying patch export-components.patch
+-- Applying patch 0023-fix-find-cares.patch
+-- Using source at C:/dev/vcpkg/buildtrees/curl/src/curl-8_1_2-48a3152245.clean
+-- Configuring x64-windows
+-- Building x64-windows-dbg
+-- Building x64-windows-rel
+-- Fixing pkgconfig file: C:/dev/vcpkg/packages/curl_x64-windows/lib/pkgconfig/libcurl.pc
+-- Using cached msys2-mingw-w64-x86_64-pkgconf-1~2.4.3-1-any.pkg.tar.zst
+-- Using cached msys2-msys2-runtime-3.6.2-2-x86_64.pkg.tar.zst
+-- Using msys root at C:/dev/vcpkg/downloads/tools/msys2/9272adbcaf19caef
+-- Fixing pkgconfig file: C:/dev/vcpkg/packages/curl_x64-windows/debug/lib/pkgconfig/libcurl.pc
+CMake Warning at scripts/cmake/vcpkg_replace_string.cmake:17 (message):
+  vcpkg_replace_string made no changes.
+Call Stack (most recent call first):
+  C:/Users/ebi/AppData/Local/vcpkg/registries/git-trees/b70ded19f70e4b198d8c3f844324c7884d3faa7d/portfile.cmake:100 (vcpkg_replace_string)
+  scripts/ports.cmake:206 (include)
+
+
+CMake Warning at scripts/cmake/vcpkg_replace_string.cmake:17 (message):
+  vcpkg_replace_string made no changes.
+Call Stack (most recent call first):
+  C:/Users/ebi/AppData/Local/vcpkg/registries/git-trees/b70ded19f70e4b198d8c3f844324c7884d3faa7d/portfile.cmake:101 (vcpkg_replace_string)
+  scripts/ports.cmake:206 (include)
+
+
+CMake Warning at scripts/cmake/vcpkg_replace_string.cmake:17 (message):
+  vcpkg_replace_string made no changes.
+Call Stack (most recent call first):
+  C:/Users/ebi/AppData/Local/vcpkg/registries/git-trees/b70ded19f70e4b198d8c3f844324c7884d3faa7d/portfile.cmake:106 (vcpkg_replace_string)
+  scripts/ports.cmake:206 (include)
+
+
+CMake Warning at scripts/cmake/vcpkg_replace_string.cmake:17 (message):
+  vcpkg_replace_string made no changes.
+Call Stack (most recent call first):
+  C:/Users/ebi/AppData/Local/vcpkg/registries/git-trees/b70ded19f70e4b198d8c3f844324c7884d3faa7d/portfile.cmake:107 (vcpkg_replace_string)
+  scripts/ports.cmake:206 (include)
+
+
+-- Installing: C:/dev/vcpkg/packages/curl_x64-windows/share/curl/vcpkg-cmake-wrapper.cmake
+-- Installing: C:/dev/vcpkg/packages/curl_x64-windows/share/curl/copyright
+-- Performing post-build validation
+Starting submission of curl[core,non-http,schannel,ssl,sspi]:x64-windows@8.1.2 to 1 binary cache(s) in the background
+Elapsed time to handle curl:x64-windows: 3.4 min
+curl:x64-windows package ABI: 69389897782ad0481dbc8d28acca4b28302071f1646a2729691a025fc101cb75
+Completed submission of zlib:x64-windows@1.2.13 to 1 binary cache(s) in 433 ms
+Completed submission of vcpkg-cmake-config:x64-windows@2022-02-06#1 to 1 binary cache(s) in 92.6 ms
+Installing 5/5 libuv:x64-windows@1.44.2...
+Building libuv:x64-windows@1.44.2...
+C:\Users\ebi\AppData\Local\vcpkg\registries\git-trees\dad61360b9c0fb825e23a4ccc01dcd9658e2f253: info: installing from git registry git+https://github.com/microsoft/vcpkg@dad61360b9c0fb825e23a4ccc01dcd9658e2f253
+Downloading https://github.com/libuv/libuv/archive/0c1fa696aa502eb749c2c4735005f41ba00a27b8.tar.gz -> libuv-libuv-0c1fa696aa502eb749c2c4735005f41ba00a27b8.tar.gz
+Successfully downloaded libuv-libuv-0c1fa696aa502eb749c2c4735005f41ba00a27b8.tar.gz
+-- Extracting source C:/dev/vcpkg/downloads/libuv-libuv-0c1fa696aa502eb749c2c4735005f41ba00a27b8.tar.gz
+-- Applying patch fix-build-type.patch
+-- Using source at C:/dev/vcpkg/buildtrees/libuv/src/1ba00a27b8-94fcdf9fd7.clean
+-- Configuring x64-windows
+-- Building x64-windows-dbg
+-- Building x64-windows-rel
+-- Fixing pkgconfig file: C:/dev/vcpkg/packages/libuv_x64-windows/lib/pkgconfig/libuv.pc
+-- Using cached msys2-mingw-w64-x86_64-pkgconf-1~2.4.3-1-any.pkg.tar.zst
+-- Using cached msys2-msys2-runtime-3.6.2-2-x86_64.pkg.tar.zst
+-- Using msys root at C:/dev/vcpkg/downloads/tools/msys2/9272adbcaf19caef
+-- Fixing pkgconfig file: C:/dev/vcpkg/packages/libuv_x64-windows/debug/lib/pkgconfig/libuv.pc
+-- Installing: C:/dev/vcpkg/packages/libuv_x64-windows/share/libuv/usage
+-- Installing: C:/dev/vcpkg/packages/libuv_x64-windows/share/libuv/copyright
+-- Performing post-build validation
+Starting submission of libuv:x64-windows@1.44.2 to 1 binary cache(s) in the background
+Elapsed time to handle libuv:x64-windows: 44 s
+libuv:x64-windows package ABI: fe03df65f9175e2b7957192409ec69a36e2fe6e40500f7ebea8ac79aa2fb5745
+Installed contents are licensed to you by owners. Microsoft is not responsible for, nor does it grant any licenses to, third-party packages.
+Some packages did not declare an SPDX license. Check the `copyright` file for each package for more information about their licensing.
+Packages installed in this vcpkg installation declare the following licenses:
+BSD-3-Clause
+MIT
+Zlib
+curl provides CMake targets:
+
+  # this is heuristically generated, and may not be correct
+  find_package(CURL CONFIG REQUIRED)
+  target_link_libraries(main PRIVATE CURL::libcurl)
+
+curl provides pkg-config modules:
+
+  # Library to transfer files with ftp, http, etc.
+  libcurl
+
+libuv provides CMake targets:
+
+    find_package(libuv CONFIG REQUIRED)
+    target_link_libraries(main PRIVATE $<IF:$<TARGET_EXISTS:uv_a>,uv_a,uv>)
+
+Completed submission of curl[core,non-http,schannel,ssl,sspi]:x64-windows@8.1.2 to 1 binary cache(s) in 1.3 s
+Waiting for 1 remaining binary cache submissions...
+Completed submission of libuv:x64-windows@1.44.2 to 1 binary cache(s) in 624 ms (1/1)
+All requested installations completed successfully in: 4.5 min

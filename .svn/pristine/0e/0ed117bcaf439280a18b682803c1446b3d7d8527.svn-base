@@ -1,0 +1,71 @@
+Package: vcpkg-cmake
+Version: 2023-05-04
+Architecture: x64-windows
+Multi-Arch: same
+Abi: c653adaa991379043362aaea9ed7696084f519bfc0e04f69c4c42dd51aef4d51
+Status: install ok installed
+
+Package: zlib
+Version: 1.2.13
+Depends: vcpkg-cmake
+Architecture: x64-windows
+Multi-Arch: same
+Abi: c620462c29085d0ef035d978a824ed83e47d14117a25ff0f6d6f8cb4a8806696
+Description: A compression library
+Status: install ok installed
+
+Package: vcpkg-cmake-config
+Version: 2022-02-06
+Port-Version: 1
+Architecture: x64-windows
+Multi-Arch: same
+Abi: a27bbd94305f5797b1915473b2c4206b356eb7ce071f879e8d7727acfc558ae2
+Status: install ok installed
+
+Package: curl
+Version: 8.1.2
+Depends: vcpkg-cmake, vcpkg-cmake-config, zlib
+Architecture: x64-windows
+Multi-Arch: same
+Abi: 69389897782ad0481dbc8d28acca4b28302071f1646a2729691a025fc101cb75
+Description: A library for transferring data with URLs
+Default-Features: non-http, ssl
+Status: install ok installed
+
+Package: curl
+Feature: non-http
+Architecture: x64-windows
+Multi-Arch: same
+Description: Enables protocols beyond HTTP/HTTPS/HTTP2
+Status: install ok installed
+
+Package: curl
+Feature: schannel
+Architecture: x64-windows
+Multi-Arch: same
+Description: SSL support (Secure Channel)
+Status: install ok installed
+
+Package: curl
+Feature: ssl
+Architecture: x64-windows
+Multi-Arch: same
+Description: Default SSL backend
+Status: install ok installed
+
+Package: curl
+Feature: sspi
+Architecture: x64-windows
+Multi-Arch: same
+Description: SSPI support
+Status: install ok installed
+
+Package: libuv
+Version: 1.44.2
+Depends: vcpkg-cmake, vcpkg-cmake-config
+Architecture: x64-windows
+Multi-Arch: same
+Abi: fe03df65f9175e2b7957192409ec69a36e2fe6e40500f7ebea8ac79aa2fb5745
+Description: libuv is a multi-platform support library with a focus on asynchronous I/O.
+Status: install ok installed
+

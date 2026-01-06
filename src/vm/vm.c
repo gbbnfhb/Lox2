@@ -23,6 +23,10 @@
 #include "../std/lang.h"
 #include "../std/net.h"
 #include "../std/util.h"
+#include "../clox_raylib.h"
+
+extern void registerRaylibFunctions(VM* vm);
+extern void registerFFIFunctions(VM *vm);
 
 static void resetCallFrame(VM* vm, int index) {
     CallFrame* frame = &vm->frames[index];
@@ -196,6 +200,11 @@ void initVM(VM* vm) {
     registerIOPackage(vm);
     registerNetPackage(vm);
     registerNativeFunctions(vm);
+    registerRaylibPackage(vm);
+	registerRaylibFunctions(vm);
+	registerFFIFunctions(vm);
+
+
 }
 
 void freeVM(VM* vm) {

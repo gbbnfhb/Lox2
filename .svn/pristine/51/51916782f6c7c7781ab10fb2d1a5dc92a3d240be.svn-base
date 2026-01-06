@@ -1,0 +1,10 @@
+^C:\LOX2\BUILD\CMAKEFILES\1A9C030608126C6F1C270CCFAF2C7B6B\GENERATE.STAMP.RULE
+setlocal
+C:\CMake\bin\cmake.exe -SC:/Lox2 -BC:/Lox2/build --check-stamp-list CMakeFiles/generate.stamp.list --vs-solution-file C:/Lox2/build/Lox2.sln
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd

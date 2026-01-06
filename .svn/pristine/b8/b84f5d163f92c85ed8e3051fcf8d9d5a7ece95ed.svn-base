@@ -1,0 +1,14 @@
+namespace test.lang
+
+class Nested { 
+    method(){ 
+        fun function(){ 
+            println(this)
+        }
+
+        function()
+    }
+}
+
+//print this
+Nested().method()

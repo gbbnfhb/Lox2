@@ -1,0 +1,72 @@
+namespace test.std
+using clox.std.io.BinaryReadStream
+using clox.std.io.BinaryWriteStream
+using clox.std.io.File
+using clox.std.io.FileReadStream
+using clox.std.io.FileWriteStream
+
+val fileIn = File("test/others/file_input.txt")
+println(fileIn)
+println("Creating a read stream for input file.")
+
+val fileReader = FileReadStream(fileIn)
+println("The first character of the file is: ${fileReader.peek()}")
+println("")
+
+println("Now reading the entire file:")
+println("")
+while(!fileReader.isAtEnd()){
+    print(fileReader.readLine())
+}
+println("\n")
+
+println("File stream is at end: ${fileReader.isAtEnd()}")
+println("Closing read stream for file.")
+fileReader.close()
+println("")
+
+val fileOut = File("test/others/file_output.txt")
+println(fileOut)
+println("Creating a write stream for out file.")
+
+val fileWriter = FileWriteStream(fileOut)
+println("")
+
+println("Now write character 'B' to file.")
+fileWriter.write("B")
+println("Then write a new line, and string 'x = 32'.")
+fileWriter.writeLine()
+fileWriter.writeString("x = 32")
+println("Then write a new line, and string 'Hello World!'.")
+fileWriter.writeLine()
+fileWriter.writeString("Hello World!")
+println("Close write stream for file.")
+fileWriter.close()
+println("")
+
+val binaryFileIn = File("test/others/binary_input.bin")
+println(binaryFileIn)
+println("Creating a binary read stream.")
+println("Now read the binary file to the screen:")
+
+val binaryReader = BinaryReadStream(binaryFileIn)
+while(!binaryReader.isAtEnd()){
+    print(binaryReader.read())
+    print(" ")
+}
+binaryReader.close()
+println("")
+
+println("")
+val fileBinaryOut = File("test/others/binary_output.bin")
+println(fileBinaryOut)
+fileBinaryOut.setWritable(true)
+println("Creating a binary write stream.")
+println("Now write to a binary file with the following bytes: ")
+
+val binaryWriter = BinaryWriteStream(fileBinaryOut)
+val bytes = [5, 37, 0, 88, 255, 12]
+println(bytes)
+binaryWriter.writeBytes(bytes)
+println("Close binary write stream.")
+binaryWriter.close()

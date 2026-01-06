@@ -1,0 +1,7 @@
+{
+  "name": "lox2",
+  "version": "2.1.0",
+  "dependencies": [
+    "curl", "libuv"
+  ]
+}

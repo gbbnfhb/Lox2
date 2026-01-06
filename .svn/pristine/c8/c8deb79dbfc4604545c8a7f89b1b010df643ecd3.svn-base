@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="17.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <CustomBuild Include="C:\Lox2\build\CMakeFiles\1a9c030608126c6f1c270ccfaf2c7b6b\generate.stamp.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="CMake Rules">
+      <UniqueIdentifier>{FE7335B7-EB41-3D48-BA79-70B9D677A4FF}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>

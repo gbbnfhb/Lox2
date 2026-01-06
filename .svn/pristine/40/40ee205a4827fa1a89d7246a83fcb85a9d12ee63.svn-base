@@ -1,0 +1,72 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Lox2\\build\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{752B6F00-5EE6-36F3-98E6-5C3C5F1A616F}|Lox2.vcxproj|C:\\Lox2\\src\\vector3.c||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{752B6F00-5EE6-36F3-98E6-5C3C5F1A616F}|Lox2.vcxproj|C:\\Lox2\\src\\vm\\vm.c||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{752B6F00-5EE6-36F3-98E6-5C3C5F1A616F}|Lox2.vcxproj|C:\\LOX2\\SRC\\CLOX_RAYLIB.H||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 1,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:1:0:{e8b06f52-6d01-11d2-aa7d-00c04f990343}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "vector3.c",
+              "DocumentMoniker": "C:\\Lox2\\src\\vector3.c",
+              "RelativeDocumentMoniker": "..\\src\\vector3.c",
+              "ToolTip": "C:\\Lox2\\src\\vector3.c",
+              "RelativeToolTip": "..\\src\\vector3.c",
+              "ViewState": "AgIAAA8AAAAAAAAAAAAowCAAAAAZAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000423|",
+              "WhenOpened": "2025-10-15T11:43:09.257Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "clox_raylib.h",
+              "DocumentMoniker": "C:\\Lox2\\src\\clox_raylib.h",
+              "RelativeDocumentMoniker": "..\\src\\clox_raylib.h",
+              "ToolTip": "C:\\Lox2\\src\\clox_raylib.h",
+              "RelativeToolTip": "..\\src\\clox_raylib.h",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2025-10-15T11:41:34.999Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "vm.c",
+              "DocumentMoniker": "C:\\Lox2\\src\\vm\\vm.c",
+              "RelativeDocumentMoniker": "..\\src\\vm\\vm.c",
+              "ToolTip": "C:\\Lox2\\src\\vm\\vm.c",
+              "RelativeToolTip": "..\\src\\vm\\vm.c",
+              "ViewState": "AgIAALcAAAAAAAAAAAAAAMcAAAAaAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000423|",
+              "WhenOpened": "2025-10-15T11:41:15.755Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

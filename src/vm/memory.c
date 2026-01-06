@@ -286,6 +286,14 @@ static size_t sizeOfObject(Obj* object) {
             ObjValueInstance* instance = (ObjValueInstance*)object;
             return sizeof(ObjValueInstance) + sizeof(Value) * instance->fields.capacity;
         }
+		case OBJ_LIBRARY: {
+			typedef struct {
+				Obj obj;
+				void *handle;    // dlopen/LoadLibrary handle
+				ObjString *path; // Library path
+			} ObjLibrary;
+			return sizeof(ObjLibrary);
+		}
         default: 
             return sizeof(Obj);
     }
@@ -627,6 +635,10 @@ static void freeObject(VM* vm, Obj* object) {
             FREE(ObjValueInstance, object, object->generation);
             break;
         }
+		
+		case OBJ_LIBRARY:  {
+			break;
+		}
     }
 }
 

@@ -1,0 +1,14 @@
+namespace test.std
+using clox.std.util.Regex
+
+val regex = Regex("[Hh]ello [Ww]orld[!]?")
+print("Creating regular expression pattern: ")
+println(regex.toString())
+
+val text = "ahem.. 'hello world!' .."
+print("Creating text: ")
+println(text)
+print("Text matches pattern: ")
+println(regex.match(text))
+print("Replace regular expression pattern: ")
+println(regex.replace(text, "my friend"))

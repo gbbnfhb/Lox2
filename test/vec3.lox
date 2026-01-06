@@ -1,0 +1,36 @@
+using  clox.Raylib.Vector3
+//import "raylib.lox";
+
+fun Vector3_add(v1,v2) {
+/*
+  var newX = v1.x + v2.x;
+  var newY = v1.y + v2.y;
+  var newZ = v1.z + v2.z;
+  
+  return Vector3(newX, newY, newZ);
+*/
+  return Vector3(v1.x + v2.x,  v1.y + v2.y, v1.z + v2.z);
+}
+
+//var v=clox.Raylib.Vector3();
+var v1=Vector3();
+var v2=Vector3( 10.0, 20.0, 30.0);
+var v3=Vector3( v2 );
+//println (v.sayHello());
+
+v1.x=100;
+v1.y=200;
+v1.z=300;
+println (v1.x);
+println (v1.y);
+println (v1.z);
+println (v2.x);
+println (v2.y);
+println (v2.z);
+println (v3.x);
+println (v3.y);
+println (v3.z);
+v1 = Vector3_add(v2,v3);
+println (v1.x);
+println (v1.y);
+println (v1.z);

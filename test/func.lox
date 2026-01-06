@@ -1,0 +1,100 @@
+//--------------------------------------------
+//1. 変数に関数を代入する
+//----------------------------------------------
+
+// 1. 普通の関数を定義する
+fun sayHello(name) {
+  println ("Hello, " + name);
+}
+
+// 2. 関数そのものを、変数に「値」として代入する
+//    sayHello() ではないことに注意！ () を付けると実行されてしまう。
+var greeter = sayHello;
+
+// 3. 変数経由で関数を呼び出す
+greeter("Lox2"); // -> "Hello, Lox2"
+
+// 別の関数を代入することもできる
+fun sayGoodbye(name) {
+  println ("Goodbye, " + name);
+}
+greeter = sayGoodbye;
+greeter("World"); // -> "Goodbye, World"
+
+
+//-----------------------------------------
+//2. 関数の引数に関数を渡す（コールバック）
+//-------------------------------------------
+// 'list' の各要素に関数 'action' を適用する関数
+fn forEach(list, action) {
+  for (var item : list) {
+    action(item); // 引数で渡された関数を実行する
+  }
+}
+
+var numbers = [1, 2, 3];
+
+// 適用したい処理を関数として定義する
+fun printSquare(n) {
+  println (n * n);
+}
+
+// forEachに、リストと「実行したい処理（関数）」を渡す
+forEach(numbers, printSquare);
+// 出力:
+// 1
+// 4
+// 9
+
+// 無名関数（ラムダ）を使えば、もっと簡潔に書ける
+forEach(numbers, fun (n) { 
+  // 数値 n を .toString() で明示的に文字列に変換する
+  println ("Item: " + n.toString()); 
+});
+
+// 出力:
+// Item: 1
+// Item: 2
+// Item: 3
+
+//--------------------------------------
+//3. 関数の戻り値として関数を返す（クロージャ） 
+//-----------------------------------------
+// 'base' を加算する関数を「生成」して返す関数
+fn makeAdder(base) {
+  // 'adder' は、外側の 'base' 変数を記憶している（これがクロージャ）
+  fn adder(n) {
+    return base + n;
+  }
+  return adder; // 関数そのものを返す
+}
+
+// 5を加算する関数を生成する
+var add5 = makeAdder(5);
+
+// 10を加算する関数を生成する
+var add10 = makeAdder(10);
+
+println (add5(100)); // -> 105
+println (add10(100)); // -> 110
+
+//--------------------------------------
+//メソッドも「値」として扱える
+//--------------------------------------
+class Counter {
+  __init__() { this.count = 0; }
+  increment() { this.count = this.count + 1; }
+}
+
+var c = Counter();
+c.increment();
+c.increment();
+println (c.count); // -> 2
+
+// incrementメソッドを「値」として取り出す
+var inc_func = c.increment;
+
+// この変数を呼び出すと、元のインスタンス 'c' に紐付いたまま実行される
+inc_func();
+inc_func();
+println (c.count); // -> 4 (ちゃんと 'c' の count が増えている)

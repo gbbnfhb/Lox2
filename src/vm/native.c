@@ -339,6 +339,11 @@ void loadSourceFile(VM* vm, const char* filePath) {
     free(source);
 }
 
+
+
+
+
+
 void registerNativeFunctions(VM* vm){
     DEF_FUNCTION(assert, 2, RETURN_TYPE(void), PARAM_TYPE(Object), PARAM_TYPE(String));
     DEF_FUNCTION(clock, 0, RETURN_TYPE(Number));
@@ -347,4 +352,5 @@ void registerNativeFunctions(VM* vm){
     DEF_FUNCTION(print, 1, RETURN_TYPE(void), PARAM_TYPE(Object));
     DEF_FUNCTION(println, 1, RETURN_TYPE(void), PARAM_TYPE(Object));
     DEF_FUNCTION(read, 0, RETURN_TYPE(String));
+
 }

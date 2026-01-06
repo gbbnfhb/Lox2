@@ -1,0 +1,117 @@
+using  clox.Raylib.Vector3
+using  clox.Raylib.Camera3D
+using  clox.Raylib.Ray
+using  clox.Raylib.RayCollision
+using  clox.Raylib.BoundingBox
+using  clox.Raylib.Color
+
+    val CAMERA_PERSPECTIVE = 0;         // Perspective projection
+    val CAMERA_FIRST_PERSON = 3 		// Camera first person
+    val MOUSE_BUTTON_LEFT    = 0;       // Mouse button left
+    val MOUSE_BUTTON_RIGHT   = 1;       // Mouse button right
+
+fn main()
+{
+    // Initialization
+    //--------------------------------------------------------------------------------------
+    val  screenWidth = 800;
+    val  screenHeight = 450;
+
+    InitWindow(screenWidth, screenHeight, "raylib [core] example - 3d picking");
+
+    // Define the camera to look into our 3d world
+    var camera = Camera3D(
+		Vector3( 10.0, 10.0, 10.0 ), // Camera position
+    	Vector3( 0.0, 0.0, 0.0 ),      // Camera looking at point
+    	Vector3( 0.0, 1.0, 0.0 ),          // Camera up vector (rotation towards target)
+    	45.0,                                // Camera field-of-view Y
+    	CAMERA_PERSPECTIVE);             // Camera projection type
+
+    var cubePosition = Vector3( 0.0, 1.0, 0.0 );
+    var cubeSize = Vector3( 2.0, 2.0, 2.0 );
+
+    var ray = Ray();                    // Picking line ray
+    var collision = RayCollision();     // Ray collision hit info
+
+    SetTargetFPS(60);                   // Set our game to run at 60 frames-per-second
+    //--------------------------------------------------------------------------------------
+
+    // Main game loop
+    while (!WindowShouldClose())        // Detect window close button or ESC key
+    {
+        // Update
+        //----------------------------------------------------------------------------------
+        if (IsCursorHidden()) UpdateCamera(camera, CAMERA_FIRST_PERSON);
+
+        // Toggle camera controls
+        if (IsMouseButtonPressed(MOUSE_BUTTON_RIGHT))
+        {
+            if (IsCursorHidden()) EnableCursor();
+            else DisableCursor();
+        }
+
+        if (IsMouseButtonPressed(MOUSE_BUTTON_LEFT))
+        {
+            if (!collision.hit)
+            {
+
+                ray = GetScreenToWorldRay(GetMousePosition(), camera);
+                // Check collision between ray and box
+                var bb= BoundingBox(Vector3( cubePosition.x - cubeSize.x/2, cubePosition.y - cubeSize.y/2, cubePosition.z - cubeSize.z/2 ),
+                                        Vector3( cubePosition.x + cubeSize.x/2, cubePosition.y + cubeSize.y/2, cubePosition.z + cubeSize.z/2 )
+                            );
+                collision = GetRayCollisionBox( ray, bb);
+            }
+            else collision.hit = false;
+        }
+        //----------------------------------------------------------------------------------
+
+        // Draw
+        //----------------------------------------------------------------------------------
+        BeginDrawing();
+
+            ClearBackground(Color("RAYWHITE"));
+
+            BeginMode3D(camera);
+
+                if (collision.hit)
+                {
+                    DrawCube(cubePosition, cubeSize.x, cubeSize.y, cubeSize.z, Color("RED"));
+                    DrawCubeWires(cubePosition, cubeSize.x, cubeSize.y, cubeSize.z, Color("MAROON"));
+
+                    DrawCubeWires(cubePosition, cubeSize.x + 0.2, cubeSize.y + 0.2, cubeSize.z + 0.2, Color("GREEN"));
+                }
+                else
+                {
+                    DrawCube(cubePosition, cubeSize.x, cubeSize.y, cubeSize.z, Color("GRAY"));
+                    DrawCubeWires(cubePosition, cubeSize.x, cubeSize.y, cubeSize.z, Color("DARKGRAY"));
+                }
+
+                DrawRay(ray, Color("MAROON"));
+                DrawGrid(10, 1.0);
+
+            EndMode3D();
+
+            DrawText("Try clicking on the box with your mouse!", 240, 10, 20, Color("DARKGRAY"));
+
+            if (collision.hit){
+             DrawText("BOX SELECTED", (screenWidth - MeasureText("BOX SELECTED", 30)) / 2, (screenHeight * 0.1), 30, Color("GREEN"));
+             }
+
+            DrawText("Right click mouse to toggle camera controls", 10, 430, 10, Color("GRAY"));
+
+            DrawFPS(10, 10);
+
+        EndDrawing();
+        //----------------------------------------------------------------------------------
+    }
+
+    // De-Initialization
+    //--------------------------------------------------------------------------------------
+    CloseWindow();        // Close window and OpenGL context
+    //--------------------------------------------------------------------------------------
+
+    return 0;
+}
+
+main()

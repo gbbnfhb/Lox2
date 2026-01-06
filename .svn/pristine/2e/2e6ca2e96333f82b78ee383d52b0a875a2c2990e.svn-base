@@ -1,0 +1,36 @@
+namespace test.lang
+
+class A { 
+    method(){ 
+        println("A method")
+    }
+
+    toString(){ 
+        return "${super.toString()} of class ${this.getClassName()}"
+    }
+}
+
+class B extends A { 
+    method(){ 
+        println("B method")
+    }
+
+    test(){
+        super.method()
+    }
+}
+
+class C extends B { }
+
+val a = A()
+val b = B()
+val c = C()
+c.test()
+
+println(c.toString())
+println(c.instanceOf(C))
+println(c.instanceOf(B))
+println(c.instanceOf(A))
+println(c.instanceOf(Object))
+println(b.instanceOf(C))
+println(b.instanceOf(A))
